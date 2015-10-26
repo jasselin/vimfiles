@@ -11,12 +11,14 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'mileszs/ack.vim'
 
 call vundle#end()
 
-colorscheme solarized
+colorscheme mustang
 set background=dark
 
 if has("gui_running")
@@ -28,9 +30,7 @@ if has("gui_running")
   elseif has("gui_macvim")
     set guifont=Menlo\ Regular:h14
   elseif has("gui_win32")
-    "set guifont=Consolas:h11:cANSI
-    "set guifont=Monaco:h10
-    set guifont=Source\ Code\ Pro\ Bold:h11
+    set guifont=DejaVu\ Sans\ Mono:h11
     set encoding=UTF8
   endif
 endif
@@ -95,9 +95,9 @@ nnoremap ? ^
 nnoremap é ?
 
 let mapleader=","
-map <leader>r :w<cr>:!ruby %<cr><cr>
 map <leader>q :only<cr>:q<cr>
 map <leader>3 :nohl<cr>
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+nnoremap <leader>a :Ack 
 
-:command Vimrc tabe ~/Dropbox/vim/vimrc.vim  
+:command Vimrc tabe $MYVIMRC
