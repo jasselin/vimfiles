@@ -1,19 +1,9 @@
 set nocompatible
 filetype off
+set runtimepath^=~/.vim
 
-" Windows
-if has("win32")
-    set rtp+=d:/dropbox/vim/bundle/Vundle.vim/
-    let path='d:/dropbox/vim/bundle'
-    :command Vimrc tabe d:/dropbox/vim/vimrc.vim
-else
-    " Linux
-    set rtp+=~/Dropbox/vim/bundle/Vundle.vim/
-    let path='~/Dropbox/vim/bundle'
-    :command Vimrc tabe ~/Dropbox/vim/vimrc.vim
-endif
-
-call vundle#begin(path)
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
@@ -109,3 +99,5 @@ map <leader>r :w<cr>:!ruby %<cr><cr>
 map <leader>q :only<cr>:q<cr>
 map <leader>3 :nohl<cr>
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+
+:command Vimrc tabe ~/Dropbox/vim/vimrc.vim  
