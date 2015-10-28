@@ -7,14 +7,13 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
+Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'elixir-lang/vim-elixir'
-Plugin 'mileszs/ack.vim'
 
 call vundle#end()
 
@@ -43,14 +42,16 @@ set nowritebackup
 set noswapfile
 
 set nowrap
-
 set autoindent
 set number
 set smartcase
 set showmatch " Show matching braces
 set backspace=eol,start,indent
 set ruler
+set history=1000
+set undolevels=1000
 set wildmenu
+set wildignore=*.swp,*.bak
 set showcmd
 set laststatus=2
 
@@ -98,6 +99,10 @@ let mapleader=","
 map <leader>q :only<cr>:q<cr>
 map <leader>3 :nohl<cr>
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
-nnoremap <leader>a :Ack 
+nnoremap ; :
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
-:command Vimrc tabe $MYVIMRC
+:command Vimrc tabe ~/.vim/.vimrc
