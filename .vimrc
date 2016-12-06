@@ -44,6 +44,7 @@ set noswapfile
 set nowrap
 set autoindent
 set number
+set cursorline
 set smartcase
 set showmatch " Show matching braces
 set backspace=eol,start,indent
