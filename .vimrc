@@ -17,7 +17,7 @@ Plugin 'elixir-lang/vim-elixir'
 
 call vundle#end()
 
-colorscheme mustang
+colorscheme onedark
 set background=dark
 
 if has("gui_running")
