@@ -13,7 +13,7 @@ Plugin 'ervandew/supertab'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
-Plugin 'elixir-lang/vim-elixir'
+Plugin 'godlygeek/tabular'
 
 call vundle#end()
 
@@ -105,5 +105,14 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+if exists(":Tabularize")
+    nmap <leader>a& :Tabularize /&<CR>
+    vmap <leader>a& :Tabularize /&<CR>
+    nmap <leader>a, :Tabularize /,\zs<CR>
+    vmap <leader>a, :Tabularize /,\zs<CR>
+    nmap <leader>a: :Tabularize /:\zs<CR>
+    vmap <leader>a: :Tabularize /:\zs<CR>
+endif
 
 :command Vimrc tabe ~/.vim/.vimrc
